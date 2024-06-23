@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pure Digital</title>
+    <link rel="stylesheet" href="2.css">
+    <script src="2.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="bi bi-laptop"></i> Pure Digital</h1>
+            
+                <nav>
+                    <ul>
+                        
+                        <li class="dropdown">
+                            <form action="/arama" method="get">
+                                <input type="text" id="search" name="q" placeholder="Ürün arayın...">
+                                <button type="submit"><i class="bi bi-search"></i></button>
+                            </form>
+                            
+                                <!-- Kategoriler burada -->
+
+                                <li class="dropdown">
+                                    <a href="#"><i class="bi bi-list"></i> Kategoriler</a>
+                                    <div class="dropdown-content">
+                                        <a href="#electronics"><i class="bi bi-lightning-charge-fill"></i> Elektronik</a>
+                                        <a href="#maternity"><i class="bi bi-heart-fill"></i> Anne Bebek</a>
+                                        <a href="#cellphone"><i class="bi bi-phone-fill"></i> Cep Telefonu ve Aksesuar</a>
+                                        <a href="#home"><i class="bi bi-house-fill"></i> Ev, Yaşam, Yapı Market</a>
+                                        <a href="#shoes"><i class="bi bi-bag-fill"></i> Ayakkabı, Çanta ve Aksesuar</a>
+                                        <a href="#books"><i class="bi bi-book-fill"></i> Kitap, Kırtasiye, Hobi, Oyuncak</a>
+                                        <a href="#beauty"><i class="bi bi-file-earmark-person-fill"></i> Kişisel Bakım ve Kozmetik</a>
+                                        <a href="#fashion"><i class="bi bi-tshirt-fill"></i> Moda</a>
+                                        <a href="#automotive"><i class="bi bi-car-fill"></i> Otomobil, Motosiklet ve Aksesuarları</a>
+                                        <a href="#games"><i class="bi bi-joystick"></i> Oyun, Konsol ve Dijital Servisler</a>
+                                        <a href="#sports"><i class="bi bi-basketball"></i> Spor ve Outdoor</a>
+                                        <a href="#supermarket"><i class="bi bi-cart-fill"></i> Süpermarket</a>
+                                    </div>
+                                    
+                                    <li class="dropdown">
+                                        <a href="#"><i class="bi bi-list"></i> Sepetim</a>
+                                        
+                                
+
+                                <li><a href="kullanıcı.html"><i class="bi bi-person"></i> Kullanıcı</a></li>
+
+                                
+                            </div>
+    </header>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2>Hakkımızda</h2>
+            <p>Pure Digital, dijital dünyada müşterilerinizle bağlantı kurmanıza yardımcı olur. Her türlü dijital pazarlama ihtiyacınız için çözümler sunuyoruz.</p>
+        </div>
+    </section>
+
+    <section id="electronics" class="section">
+        <div class="container">
+            <h2>Elektronik</h2>
+            <p>Bu bölüm elektronik ürünlerle ilgilidir.</p>
+        </div>
+    </section>
+
+    <section id="maternity" class="section">
+        <div class="container">
+            <h2>Anne Bebek</h2>
+            <p>Bu bölüm anne ve bebek ürünleriyle ilgilidir.</p>
+        </div>
+    </section>
+
+    <section id="cellphone" class="section">
+        <div class="container">
+            <h2>Cep Telefonu ve Aksesuar</h2>
+            <p>Bu bölüm cep telefonları ve aksesuarlarıyla ilgilidir.</p>
+        </div>
+    </section>
+
+    <section id="home" class="section">
+        <div class="container">
+            <h2>Ev, Yaşam, Yapı Market</h2>
+            <p>Bu bölüm ev eşyaları, yaşam ürünleri ve yapı market ürünleriyle ilgilidir.</p>
+        </div>
+    </section>
+
+    <section id="shoes" class="section">
+        <div class="container">
+            <h2>Ayakkabı
+                <h2>Ürün Ekle</h2>
+                <form id="productForm">
+                    <label for="productName">Ürün Adı:</label><br>
+                    <input type="text" id="productName" name="productName" required><br>
+            
+                    <label for="productPrice">Fiyatı:</label><br>
+                    <input type="number" id="productPrice" name="productPrice" min="0" step="0.01" required><br>
+            
+                    <label for="productCategory">Kategori:</label><br>
+                    <select id="productCategory" name="productCategory" required>
+                        <option value="">Kategori Seçin</option>
+                        <option value="electronics">Elektronik</option>
+                        <option value="maternity">Anne Bebek</option>
+                        <option value="cellphone">Cep Telefonu ve Aksesuar</option>
+                        <option value="home">Ev, Yaşam, Yapı Market</option>
+                        <option value="shoes">Ayakkabı, Çanta ve Aksesuar</option>
+                        <!-- Diğer kategorileri ekleyin -->
+                    </select><br>
+            
+                    <label for="productStock">Stok Durumu:</label><br>
+                    <input type="number" id="productStock" name="productStock" min="0" required><br>
+            
+                    <button type="button" onclick="addProduct()">Ürün Ekle</button>
+                </form>
+                <label for="productStock">Stok Durumu:</label><br>
+        <input type="number" id="productStock" name="productStock" min="0" required><br>
+
+        <button type="button" onclick="addProduct()">Ürün Ekle</button>
+    </form>
+
+    <script src="2.js"></script>

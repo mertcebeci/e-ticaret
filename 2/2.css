@@ -1,0 +1,380 @@
+/* Genel stiller */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header stilleri */
+header {
+    background-color: #E2BF81;
+    color: #fff;
+    padding: 10px; /* Sol ve sağ boşluklar */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center; /* Dikey hizalama */
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0; /* Son öğe için sağ boşluk kaldır */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Navbar dropdown stilleri */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #E2BF81;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Arama çubuğu stilleri */
+/* Arama çubuğu stilleri */
+#box {
+  max-width: 300px;
+  position: relative;
+}
+
+#box .fa-search {
+  position: absolute;
+  top: 14px;
+  left: 12px;
+  font-size: 20px;
+  color: #E2BF81;
+}
+
+#search {
+  width: 100px;
+  box-sizing: border-box;
+  border: 2px solid #000;
+  border-radius: 4px;
+  font-size: 18px;
+  padding: 12px 20px 12px 40px;
+  transition: width 0.4s ease-in-out;
+}
+
+#search:focus {
+  width: 100%;
+}
+
+
+/* Carousel stilleri */
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; /* Ekran yüksekliğinin %80'i kadar */
+}
+
+#carouselExampleIndicators {
+    width: 90%;
+    height: 500px; /* Carousel yüksekliği */
+    margin: 20px auto;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%; /* Resim yüksekliği */
+    object-fit: cover;
+}
+
+/* Alışveriş Sepeti */
+.shopping-cart-icon {
+    position: relative;
+    cursor: pointer;
+}
+
+.shopping-cart-list {
+    position: absolute;
+    top: 40px;
+    right: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 1000;
+    max-height: 200px;
+    overflow-y: auto;
+    width: 200px; /* Dropdown genişliği */
+}
+
+.shopping-cart-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.shopping-cart-list li {
+    padding: 8px 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+.shopping-cart-list li:last-child {
+    border-bottom: none;
+}
+
+
+/* toogle button*/
+
+body {
+  background-color: #212121;
+  
+  transition: background-color 0.3s ease;
+  color: #fff;
+
+  align-items: center;
+}
+
+  
+  
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /* Diğer stiller */
+}
+
+.mode-text {
+  margin-top: 10px; /* İstenilen boşluk */
+  font-size: 14px;
+  color: #fffbfb; /* İstenilen renk */
+}
+
+  
+ 
+
+
+
+.switch {
+  font-size: 13px;
+  position: relative;
+  display: flex;
+  justify-content: flex-end; /* Sağa doğru hizala */
+  align-items: center;
+  width: 3.5em;
+  height: 2em;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  border: 2px solid #414141;
+  border-radius: 80px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  left: 0.2em;
+  bottom: 0.2em;
+  background-color: white;
+  border-radius: 50%;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.switch input:checked + .slider {
+  border: 2px solid #0974f1;
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(1.5em);
+}
+
+/* Gece modu için ek stiller */
+body.dark-mode {
+  background-color: #121212;
+  color: #fff;
+}
+
+body.dark-mode .slider {
+  border-color: #757575;
+}
+
+body.dark-mode .slider:before {
+  background-color: #757575;
+}
+
+body.dark-mode .switch input:checked + .slider {
+  border-color: #0974f1;
+  box-shadow: 0 0 20px rgba(9, 117, 241, 0.8);
+}
+
+body.dark-mode .switch input:checked + .slider:before {
+  transform: translateX(1.5em);
+}
+/* footer*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+
+
+
+
+.footer {
+  position: relative;
+  width: 100%;
+    background-color: #E2BF81;
+    
+  min-height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.social-icon,
+.menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.social-icon__item,
+.menu__item {
+  list-style: none;
+}
+
+.social-icon__link {
+  font-size: 2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+.social-icon__link:hover {
+  transform: translateY(-10px);
+}
+
+.menu__link {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+  text-decoration: none;
+  opacity: 0.75;
+  font-weight: 300;
+}
+
+.menu__link:hover {
+  opacity: 1;
+}
+
+.footer p {
+  color: #fff;
+  margin: 15px 0 10px 0;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url("https://i.ibb.co/wQZVxxk/wave.png");
+  background-size: 1000px 100px;
+}
+
+.wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWaves 4s linear infinite;
+}
+
+.wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animate 4s linear infinite !important;
+}
+
+.wave#wave3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animateWaves 3s linear infinite;
+}
+
+.wave#wave4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animate 3s linear infinite;
+}
+
+@keyframes animateWaves {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: -1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}

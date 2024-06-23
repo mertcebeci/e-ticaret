@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alışveriş Sepeti</title>
+    <style>
+        #sepet {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .urun {
+            border-bottom: 1px solid #eee;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .urun img {
+            max-width: 80px;
+            margin-right: 10px;
+        }
+        #toplam {
+            font-weight: bold;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Alışveriş Sepeti</h1>
+    <div id="sepet">
+        <!-- Sepet içeriği buraya eklenecek -->
+    </div>
+    <div id="toplam">
+        Toplam Tutar: $<span id="toplamTutar">0.00</span>
+    </div>
+
+    <script>
+        let toplamTutar = 0;
+
+        function urunEkle(urunAdi, fiyat, resimURL) {
+            const sepetDiv = document.getElementById('sepet');
+
+            // Yeni ürünü sepete ekle
+            const yeniUrun = document.createElement('div');
+            yeniUrun.classList.add('urun');
+
+            yeniUrun.innerHTML = `
+                <img src="${resimURL}" alt="${urunAdi}">
+                <p>${urunAdi}</p>
+                <p>Fiyat: $${fiyat.toFixed(2)}</p>
+                <button onclick="urunuKaldir(this, ${fiyat})">Kaldır</button>
+            `;
+
+            sepetDiv.appendChild(yeniUrun);
+
+            // Toplam tutarı güncelle
+            toplamTutar += fiyat;
+            document.getElementById('toplamTutar').textContent = toplamTutar.toFixed(2);
+        }
+
+        function urunuKaldir(button, urunFiyati) {
+            // Ürünü sepetten kaldır
+            const urunDiv = button.parentNode;
+            urunDiv.parentNode.removeChild(urunDiv);
+
+            // Toplam tutarı güncelle
+            toplamTutar -= urunFiyati;
+            document.getElementById('toplamTutar').textContent = toplamTutar.toFixed(2);
+        }
+
+        // Örnek ürünler ekleyelim
+        urunEkle('Ürün 1', 10.00, 'urun1.jpg');
+        urunEkle('Ürün 2', 20.00, 'urun2.jpg');
+    </script>
+</body>
+</html>

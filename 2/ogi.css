@@ -1,0 +1,54 @@
+body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+  background-color: #E2BF81; /* Arka plan rengi */
+  font-family: Arial, sans-serif;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 400px; /* Chat kutusunun maksimum genişliği */
+  background-color: #ffffff; /* Chat kutusu rengi */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column-reverse; /* İçeriği ters sırala (en üstteki en alta gelecek) */
+  height: 80vh; /* Chat kutusunun yüksekliği */
+  overflow-y: auto; /* İçerik alanının taşması durumunda kaydırma çubuğu ekle */
+}
+
+#chatbox {
+
+
+  max-height: 00px; /* Chat kutusunun maksimum yüksekliği */
+  margin-bottom: 500px; /* Chat kutusunun alt boşluğu */
+}
+
+#userInput {
+  width: 100%; /* İnput genişliği tam */
+  margin-bottom: 20px; /* Giriş alanının alt boşluğu */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#sendButton {
+  
+  margin-top: auto; /* En alta yerleştirme için */
+  margin-bottom: 10px; /* Gönder butonunun alt boşluğu */
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+#sendButton:hover {
+  background-color: #45a049;
+}
